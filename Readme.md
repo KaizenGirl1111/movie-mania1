@@ -1,88 +1,114 @@
-# Django based movie recommender system
-> https://awesome-movie-recommender.herokuapp.com
+<h1 align="center">Microsoft Engage 2022
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/480px-Microsoft_logo.svg.png" alt="Logo" width="25" height="25">
+</h1>
 
-![GitHub stars](https://img.shields.io/github/stars/rajaprerak/movie_recommender) 
-[![Maintenance](https://img.shields.io/badge/maintained-yes-green.svg)](https://github.com/rajaprerak/movie_recommender/commits/master)
-[![Website shields.io](https://img.shields.io/badge/website-up-yellow)](https://awesome-movie-recommender.herokuapp.com/)
-[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
+<h2 align="center">Movie Recommendation System (Using Collaborative Filtering) </h2>
 
-### Website Preview
-#### Home Page
-<img src="website_images/HomePage.png" width="900">
+ <!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#problem-statement">Problem Statement</a></li>
+        <li><a href="#compatible-platforms">Compatible Platforms</a></li>
+        <li><a href="#tech-stack">Tech Stack</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#algorithms">Algorithms for Recommendation Engine</a>
+      <ul>
+        <li><a href="#collaborative-filtering">Collaborative Filtering</a></li>
+        <li><a href="#pearson-correaltion">Pearson Correlation:USP of the project</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#navigating-through-the-app">Navigating through the App</a></li><ul>
+        <li><a href="#login">Login</a></li>
+        <li><a href="#home-page">Home Page</a></li>
+        <li><a href="#get-recommendations">Get Recommendations</a></li>
+      </ul>
+    <li><a href="#future-scope">Future Scope</a></li>
+    
+  </ol>
+</details>
 
-#### Detail Page
-<img src="website_images/DetailPage.png" width="900">
+<!-- ABOUT THE PROJECT -->
 
-----
+## About The Project
+* This project was built during the Microsoft Engage 2022 program.
+* It is a model based movie recommender system which recommends movie on the basis of ratings given by the user to other movies
+* A user can create account, login, rate movies, get recommendations, add movies to Watchlist and check about the cast and crew of a particular movie using the tmbd API.
 
-## Installation 📦
+### Problem Statement
+Demonstrate through your app the different kinds of algorithms that a web-streaming app (like Netflix) or an audio-streaming app (like Spotify) may use for their Recommendation Engine.
 
->pip install -r requirements.txt
+### Compatible Platforms
+Laptops and Desktops.
 
-#### Clone
-
-- Clone this repo to your local machine.
-
-#### Run server locally
-
-```shell
-$ python manage.py runserver
-```
-> Go to localhost:8000
-
----
-## Features 📋
-* User can register and login.
-* User can search through various movies and look through its details.
-* User can give rating to the movies.
-* User can add movie to their watch list.
-* User can get movie recommendation (Recommendation algorithm (Collaborative Filtering) which suggests new movies based on the ratings given by user.)
----
-
-## Algorithm
-##### Collabortive Filtering (Recommender Algorithm)
-* Collaborative filtering filters information by using the interactions and data collected by the system from other users. It's based on the idea that people who agreed in their evaluation of certain items are likely to agree again in the future.
-* When we want to find a new movie to watch we'll often ask our friends for recommendations. Naturally, we have greater trust in the recommendations from friends who share tastes similar to our own.
-* Collaborative-filtering systems focus on the relationship between users and items. The similarity of items is determined by the similarity of the ratings of those items by the users who have rated both items.
-* There are two types of collaborative filtering
-    * **User-based**, which measures the similarity between target users and other users.
-    * **Item-based**, which measures the similarity between the items that target users rate or interact with and other items.
-    > I have used **user based** collaborative filtering in this project.
-     
-     
-  ---
-
-## Contributing 💡
-
-
-#### Step 1
-
-- **Option 1**
-    - 🍴 Fork this repo!
-
-- **Option 2**
-    - 👯 Clone this repo to your local machine.
+### Tech Stack  
+1.Front-end: HTML, CSS, Bootstrap, JavaScript
+2. Back-end: Django
 
 
-#### Step 2
+<!-- DIFFERENT RECOMMENDATION ENGINE -->
 
-- **Build your code** 🔨🔨🔨
+## Different Recommendation Engine
+1. Content-Based Filtering
+2. Memory-Based Collaborative Filtering
+3. Model-Based Collaborative Filtering
+4. Deep Learning / Neural Network
 
-#### Step 3
+### Collaborative Filtering
+There are 2 main types of memory-based collaborative filtering algorithms:
+1.	User-User Collaborative Filtering: Here we find look alike users based on similarity and recommend movies which first user’s look-alike has chosen in past. 
 
-- 🔃 Create a new pull request.
-
-## Team ✨
-
-| <a href="https://rajaprerak.github.io" target="_blank">**Prerak Raja**</a>
-| :---: |
-| [![Prerak Raja](https://github.com/rajaprerak.png?size=100)](https://rajaprerak.github.io)    
-| <a href="https://github.com/rajaprerak" target="_blank">`github.com/rajaprerak`</a>
+2.	Item-Item Collaborative Filtering: It is quite similar to previous algorithm, but instead of finding user’s look-alike, we try finding movie’s look-alike. Once we have movie’s look-alike matrix, we can easily recommend alike movies to user who have rated any movie from the dataset. 
 
 
-## License
-[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
+### Pearson Correlation
+In the project ,I have userd user-user collaborative filtering using pearson coorelation. I have used the pivot table and correlation coefficient to recommend movies here. If the user likes a particular movie, it takes that movie’s columns and find the correlation of that column with all the other movie columns and get the movies that highly correlate with the chosen movie.
 
-- **[MIT license](http://opensource.org/licenses/mit-license.php)**
+<!-- INSTALLATIONS -->
 
-                                                                                                                                                                                                                                                                        
+## Getting Started
+To install and run the project on your local system, clone this repo to your local machine and open command prompt and go to that path:
+
+### Set up virtual environment
+>py -m venv venv
+>[project path]/activate.bat
+
+### Installation
+sh
+  pip install -r requirements.txt
+
+* To run it on the local host-
+
+To separately run the application on your local host,run the following command:
+
+sh
+  Python manage.py runserver
+
+
+<!-- APP TUTORIAL-->
+## Navigating Through The App
+### Login 
+Registered Users can login into their account using the username and password and can start rating the movies and then get recommendations.
+
+<img src="images/login-screen.png" alt="login screen" width="700"/>
+ 
+### Home Page-
+This page displays all the movies and users can click on the movie and give ratings and add them to list or can see the cast and crew of the movie. 
+
+<img src="website_images/Home-screen.png" alt="video call welcome screen" width="700"/>
+
+### Get Recommendations-
+Registered users will get some recommendations based on the rating given by them by clicking on the button 'Get Recommendation' to get some recommendations.
+
+<img src="website_images/recommendation-window.png" alt="blank chat window" width="700"/>

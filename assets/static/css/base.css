@@ -14,6 +14,21 @@
 	font-style: italic;
 	font-weight: 700;
 } */
+*{
+
+  color: black;
+}
+body{
+  /* background-image: linear-gradient(#11998e,#38ef7d); */
+  /* color:#11998e ; */
+  background-color: #a2eabe;
+  color: black
+ 
+
+};
+  /* background-image: linear-gradient(,#99f2c8);  ##1f4037 */
+  /* background-color:#99f2c8;
+} 
 
 element.style {
   background-color: #072d4e;

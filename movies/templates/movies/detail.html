@@ -17,11 +17,12 @@
 
   <div class="container-fluid">
 
-    <div class="row">
+    <div  class="row">
       <!-- Left Movie Info -->
       <div class="col-sm-2 col-md-3">
         <a href="#">
-          <img src="{{ object.get_image}}" class="img-fluid" style="border-radius: 22px 22px 22px 22px;">
+          <!-- class="img-fluid" -->
+          <img src="{{ object.get_image}}" width="200px"  style="border-radius: 22px 22px 22px 22px; margin-left: 240px;">
         </a>
         <h2></h2>
       </div>
@@ -35,7 +36,7 @@
             </small>
           </h3>
 
-          <form class="" method="post" onsubmit="return validateForm()" name="ratingForm">
+          <form  class="" method="post" onsubmit="return validateForm()" name="ratingForm">
             <div class="input-group mb-3">
               <div class="col-lg-14">
                 <div class="star-rating text-light">
@@ -88,8 +89,10 @@
 
       {% for cast in object.get_cast %}
         <div class="col">
-          <img src="{{cast.profile}}" alt="" class="img-thumbnail" width="150px">
-          {{cast.name}}
+          <!-- class="img-thumbnail"  -->
+          <img src="{{cast.profile}}"  width="190px" style="margin-top:50px ; border-radius:10px;box-shadow:5px 0px 8px rgba(0,0,0.1)" >
+          <h3>     {{cast.name}}</h3>
+     
           {{cast.character}}
         </div>
       {% endfor %}
